@@ -20,12 +20,22 @@ Use the latest resume, user-provided material, and explicitly confirmed facts as
 
 When material is thin, make the student's real work easier to inspect instead of pretending it is larger: show a course project as a course project, describe a prototype as a prototype, and foreground thought process, contribution, and concrete output.
 
+## Make aesthetic choice a required gateway
+
+For a new portfolio, an overall visual redesign, or any request that materially changes the site's look and feel, do not begin the full-page visual build after merely inferring a style. Inspect the student's materials and existing site first, then guide an explicit two-stage aesthetic decision. Content inventory, technical diagnosis, and a low-fidelity structural outline may happen beforehand; global styling, visual components, imagery treatment, and motion must wait for the decision.
+
+1. **Offer a tailored direction menu.** Ask the student to choose, combine, or reject 3–5 genuinely distinct directions. Ground every option in their target role, evidence, and stated taste—not a one-size-fits-all template. For each option, state the intended impression, page rhythm or information density, typography and color/material cues, imagery treatment, and appropriate degree of interaction. A useful set might contrast a quiet editorial portfolio, a precise professional system, a maker/developer interface, an expressive visual narrative, or a playful experimental concept, but only include directions that fit this person. Mark a recommendation when warranted without deciding for them.
+2. **Show references after a direction is chosen.** Present 2–4 reference routes within the selected direction so the student can react to concrete work before implementation. When web research and the student's permission/context allow it, provide attributable public reference links or screenshots and say exactly what to learn from each; otherwise provide compact visual reference boards or rough style frames. Contrast useful variables such as type scale, composition, palette, texture, image use, and motion. References are for analysis, never a blueprint to copy.
+3. **Obtain an aesthetic brief, then build.** Ask the student to select a reference, name elements to keep or avoid, or specify a blend. Restate the resulting brief in actionable terms—visual mood, hierarchy, type, color/material, imagery, component character, and motion—and obtain confirmation before building the full visual system. Keep this choice visible in design tokens and component decisions, rather than treating it as a decorative layer.
+
+If the student already supplies an unambiguous design system, approved reference, or detailed visual brief, summarize it and ask for a lightweight confirmation instead of forcing them through generic choices. If the task is only a functional fix, content correction, or non-visual maintenance, do not introduce this gate. Preserve an approved direction through later iterations; return to the reference stage only when the student requests a meaningful aesthetic change.
+
 ## Make personalization structural, not decorative
 
 Personalization should change the hierarchy, language, and interaction to match the student—not merely swap colors.
 
 - Let the user's stated taste, discipline, target role, portfolio examples, existing assets, and personal interests guide the visual direction. Explicit user choices override inferred defaults.
-- If the user has not chosen a direction, make a reversible proposal grounded in their materials; use editable design tokens and content data rather than scattering hard-coded decisions.
+- Use the confirmed aesthetic brief to make reversible visual decisions; keep editable design tokens and content data rather than scattering hard-coded choices.
 - Match emphasis to the audience. For example, visual/design roles may lead with work and process; technical roles with shipped projects, repositories, and decisions; research roles with question, method, and evidence; content/marketing roles with audience insight, work samples, and outcomes; generalist roles with a clear value proposition plus selected proof.
 - Keep the first screen simple: identity or role direction, a concise differentiator, one or two high-value next steps, and no competing decoration.
 - Personal style must not weaken readability, accessibility, mobile use, contrast, or the ability to find a project, resume, and contact method quickly.
@@ -50,7 +60,7 @@ Choose only the sections that support the user's goals. Typical options are intr
 
 ## Motion and static HTML requests
 
-- Add motion only when it reinforces the selected personal direction or the user requests it. Respect `prefers-reduced-motion`, keep navigation usable during motion, and avoid effects that obscure content. A requested paper turn should show both outgoing and incoming content on the turning sheet and use non-uniform, corner-led motion rather than a rigid card flip.
+- Add motion only when it reinforces the confirmed personal direction or the user requests it. Respect `prefers-reduced-motion`, keep navigation usable during motion, and avoid effects that obscure content. A requested paper turn should show both outgoing and incoming content on the turning sheet and use non-uniform, corner-led motion rather than a rigid card flip.
 - When the user asks for a standalone HTML version, create a separate static entry unless they explicitly ask to replace the application. Use vanilla HTML/CSS and only necessary JavaScript, retain real external links and authorized contact details, and use relative asset paths so it works with its accompanying asset folder.
 
 ## Verify and release deliberately
