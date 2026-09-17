@@ -15,7 +15,7 @@
 ### 支持 `gh skill` 的兼容宿主
 
 ```bash
-gh skill install singerliu226/student-portfolio-site skills/student-portfolio-site --dir ~/.workbuddy/skills --pin v1.1.0
+gh skill install singerliu226/student-portfolio-site skills/student-portfolio-site --dir ~/.workbuddy/skills --pin v1.2.0
 ```
 
 `gh skill` 仍处于预览阶段；请仅在宿主明确支持该命令时使用。WorkBuddy 桌面端请使用上方 ZIP 导入方式。
@@ -23,7 +23,7 @@ gh skill install singerliu226/student-portfolio-site skills/student-portfolio-si
 ## 使用
 
 ```text
-使用 $student-portfolio-site 先帮我确定审美方向，再为我的秋招方向创建或优化个人作品集网站。
+使用 $student-portfolio-site，先邀请我提交喜欢的网页或应用截图、链接并分析，再确定审美方向，为我的秋招方向创建或优化个人作品集网站。
 ```
 
 ## 内容与隐私
@@ -34,6 +34,6 @@ gh skill install singerliu226/student-portfolio-site skills/student-portfolio-si
 
 ## 版本
 
-当前版本：`v1.1.0`
+当前版本：`v1.2.0`
 
 本仓库暂未附加开源许可证；使用、分发或二次改造前请联系维护者取得授权。
