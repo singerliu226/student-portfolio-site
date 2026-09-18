@@ -15,7 +15,7 @@
 ### 支持 `gh skill` 的兼容宿主
 
 ```bash
-gh skill install singerliu226/student-portfolio-site skills/student-portfolio-site --dir ~/.workbuddy/skills --pin v1.3.0
+gh skill install singerliu226/student-portfolio-site skills/student-portfolio-site --dir ~/.workbuddy/skills --pin v1.4.0
 ```
 
 `gh skill` 仍处于预览阶段；请仅在宿主明确支持该命令时使用。WorkBuddy 桌面端请使用上方 ZIP 导入方式。
@@ -23,7 +23,7 @@ gh skill install singerliu226/student-portfolio-site skills/student-portfolio-si
 ## 使用
 
 ```text
-使用 $student-portfolio-site，先给我三种审美方向和第四项“我的审美比你牛，我来上传”，再根据我提供的参考确定个人作品集网站的设计。
+使用 $student-portfolio-site，带我一步步整理用于秋招的个人网站；给我三种审美方向和第四项“我的审美比你牛，我来上传”，再根据我提供的参考确定设计。
 ```
 
 ## 内容与隐私
@@ -34,6 +34,10 @@ gh skill install singerliu226/student-portfolio-site skills/student-portfolio-si
 
 ## 版本
 
-当前版本：`v1.3.0`
+当前版本：`v1.4.0`
+
+## 维护与发布
+
+`skills/student-portfolio-site/` 是唯一的发布源。运行 `python3 scripts/package_workbuddy_skill.py` 会检查 Skill 引用的参考文件，并生成包含 `SKILL.md` 与 `references/` 的 WorkBuddy ZIP。发布前按 `skills/student-portfolio-site/references/skill-regression-scenarios.md` 进行四场景回归检查。
 
 本仓库暂未附加开源许可证；使用、分发或二次改造前请联系维护者取得授权。

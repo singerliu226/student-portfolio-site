@@ -1,0 +1,6 @@
+interface:
+  display_name: "秋招个人作品集网站"
+  short_description: "为秋招学生打造有个人辨识度且可验证的个人网站"
+  default_prompt: "使用 $student-portfolio-site 先邀请我提交喜欢的网页或应用参考，再确定审美方向并优化个人作品集网站。"
+policy:
+  allow_implicit_invocation: true

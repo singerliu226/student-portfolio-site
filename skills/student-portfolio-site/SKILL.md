@@ -20,6 +20,23 @@ Use the latest resume, user-provided material, and explicitly confirmed facts as
 
 When material is thin, make the student's real work easier to inspect instead of pretending it is larger: show a course project as a course project, describe a prototype as a prototype, and foreground thought process, contribution, and concrete output.
 
+## Lead first-time users through the work without making them prompt engineers
+
+When a student says any equivalent of “帮我做个人网站”“我想做作品集”“我不知道怎么开始”, treat that short request as enough to begin a guided flow. Do not respond with a long manual, a pile of copyable prompts, or a requirement to understand the workflow first.
+
+- Briefly tell them what will happen: materials and public boundaries first, then a visual choice, then a local first draft. Make clear that they do not need to know how to write prompts.
+- Ask one low-friction opening question at a time. Start with an easy choice such as: “你现在手边有什么？①简历或项目材料，直接上传；②只有零散经历，我来按格式问；③还没整理，先告诉我想投什么方向；方向也没想好就直接说‘还没想好’。” Briefly remind them to withhold or redact phone numbers, addresses, identity information, internal company material, and any content whose public status is unclear.
+- A resume is helpful, not a gate. If it is absent, give the student a short fill-in form for their target direction, 2–3 real experiences, what they personally did, what can be public, and what they want visitors to notice. Do not demand a polished document before proceeding.
+- If the student says they have no project, no direction, or cannot think of an experience, remind them that course work, clubs, competitions, part-time work, writing, self-initiated experiments, and small prototypes all count. Accept “想不出来” as a valid answer and use gentle follow-up questions to surface one honest starting point rather than letting that answer stop the flow.
+- After each reply, retain confirmed facts and ask only the next missing question that materially affects the site. Do not make the student restate information or return them to the start of the process.
+- Before visual work, summarize the evidence and public/private boundary in plain language. If a fact is missing, label it as awaiting confirmation rather than halting or filling it in.
+- When the student has no design vocabulary or says “你决定”, recommend one route, explain it briefly, and ask for a lightweight confirmation such as “就按推荐做”. Keep the alternative to upload their own reference available, but do not force it.
+- If a supplied link cannot be opened or a screenshot is insufficient, explain the limitation in one sentence, ask what the student likes about it, and continue with the confirmed direction. Do not let an inaccessible reference block the whole site.
+- Once content and aesthetics are confirmed, make a local first draft. If the material remains incomplete, use clearly marked `[待我确认]` placeholders only where needed; never invent facts. Choose a normal, clearly named local project folder when the host permits and tell the user its exact location; do not make folder selection a blocker unless the host requires a choice.
+- After the first draft, offer simple next choices—continue editing, replace material, or prepare for public review—rather than leaving the student to infer the next action.
+
+For the exact first-run conversation shape and the one-sentence WorkBuddy starter users can copy, read [references/first-run-guidance.md](references/first-run-guidance.md).
+
 ## Make aesthetic choice a required gateway
 
 For a new portfolio, an overall visual redesign, or any request that materially changes the site's look and feel, do not begin the full-page visual build after merely inferring a style. Inspect the student's materials and existing site first, then guide an explicit two-stage aesthetic decision. Content inventory, technical diagnosis, and a low-fidelity structural outline may happen beforehand; global styling, visual components, imagery treatment, and motion must wait for the decision.
@@ -29,6 +46,8 @@ For a new portfolio, an overall visual redesign, or any request that materially 
 3. **Obtain an aesthetic brief, then build.** Ask the student to select a reference route, name elements to keep or avoid, or specify a blend. Restate the resulting brief in actionable terms—visual mood, hierarchy, type, color/material, imagery, component character, motion, and the reference-derived principles to apply—and obtain confirmation before building the full visual system. Carry that mapping into design tokens and component decisions, rather than treating it as a decorative layer.
 
 If the student already supplies an unambiguous design system, approved reference, or detailed visual brief, summarize it and ask for a lightweight confirmation instead of forcing them through generic choices. If the task is only a functional fix, content correction, or non-visual maintenance, do not introduce this gate. Preserve an approved direction through later iterations; return to the reference stage only when the student requests a meaningful aesthetic change.
+
+For a repeatable visual-choice message, the reference-analysis map, and the fast path for “你决定”, read [references/aesthetic-interaction-contract.md](references/aesthetic-interaction-contract.md) before presenting aesthetic choices.
 
 ## Make personalization structural, not decorative
 
@@ -41,6 +60,13 @@ Personalization should change the hierarchy, language, and interaction to match 
 - Personal style must not weaken readability, accessibility, mobile use, contrast, or the ability to find a project, resume, and contact method quickly.
 
 Do not force a specific aesthetic, avatar, animation, color palette, section order, or social link. A restrained editorial layout, playful interaction, visual mood board, code-terminal language, or clean professional system are all valid when they serve the person's direction and audience.
+
+## Choose an implementation path the student can maintain
+
+- In an existing site, understand the current stack and preserve its conventions unless the user requests a migration.
+- For a new site with no requested stack, prefer the lowest-complexity implementation that can meet the confirmed brief—usually a static HTML/CSS/JavaScript site. Use a framework only when the requested interactions, existing project, or hosting setup materially benefit from it.
+- Keep replaceable content, project data, visual tokens, and external links centralized rather than distributing personal details through components. Leave a short local preview/start instruction with the result.
+- A polished first draft may use clearly marked `[待我确认]` gaps, but never fabricated evidence, fake testimonials, invented metrics, or misleading mock links.
 
 ## Organize evidence into a useful story
 
@@ -69,6 +95,7 @@ Inspect the actual diff and verify in proportion to the change:
 
 1. Run relevant tests and a production build when the project has them, plus `git diff --check` for source edits.
 2. When assets or static HTML change, request the page and essential assets through the local server; verify the resume and all changed project links where accessible.
-3. Check desktop and narrow-screen layouts after visual changes, especially clipped text, missing images, overlap, unreachable calls to action, and keyboard focus.
-4. Preserve unrelated dirty-worktree changes. Stage and commit only files belonging to the task.
-5. Commit, push, or deploy only when the user explicitly asks. Report what was actually completed; never claim a deployment based only on a local build.
+3. Check desktop and narrow-screen layouts after visual changes, especially clipped text, missing images, overlap, unreachable calls to action, heading order, keyboard focus, color contrast, and `prefers-reduced-motion` behavior. Keep images appropriately sized and include a useful page title and description for shared links.
+4. Before preparing a public demo, deployment, or shareable repository, read [references/public-release-checklist.md](references/public-release-checklist.md). This is a review gate, not permission to publish.
+5. Preserve unrelated dirty-worktree changes. Stage and commit only files belonging to the task.
+6. Commit, push, or deploy only when the user explicitly asks. Report what was actually completed; never claim a deployment based only on a local build.
